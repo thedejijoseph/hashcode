@@ -1,0 +1,15 @@
+ time_to_start = abs((0-int(b))+(0-int(y)))
+    print(time_to_start)
+    if time_to_start < int(s):
+        wait_time = int(s) - time_to_start
+    else:
+        wait_time = 0
+    total_time_to_start = time_to_start + wait_time
+    print(total_time_to_start)
+
+    time_to_drop = abs((int(a)-int(x) + int(b)-int(y)))
+
+    total_time_taken = total_time_to_start + time_to_drop
+    ride_times.append(total_time_taken)
+
+# print(ride_times)
