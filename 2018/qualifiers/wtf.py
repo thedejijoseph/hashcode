@@ -1,5 +1,5 @@
 # first of, read the file in
-filename = 'a_example'
+filename = 'e_high_bonus'
 content = open("input/"+filename+".in", 'r')
 
 R, C,F,N,B,T = content.readline().split()
