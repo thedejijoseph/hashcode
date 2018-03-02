@@ -1,5 +1,5 @@
 # first of, read the file in
-filename = 'b_should_be_easy'
+filename = 'a_example'
 content = open("input/"+filename+".in", 'r')
 
 R, C,F,N,B,T = content.readline().split()
@@ -49,9 +49,10 @@ for vehicle in range(1, no_of_vehicles+1):
     solution[vehicle_no] = vehicle_contains
 
 with open("output/"+filename+".out", "w") as submit:
-	for vehicle, rides in solution.items():
-		rides = " ".join([str(r) for r in rides])
+	for vehicle, t_rides in solution.items():
+		rides = " ".join([str(r) for r in t_rides])
 		vehicle = str(vehicle)
+		no_of_rides = str(len(t_rides))
 		
-		line = str(vehicle + " " + rides + "\n")
+		line = str(no_of_rides + " " + rides + "\n")
 		submit.write(line)
