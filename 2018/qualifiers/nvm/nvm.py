@@ -1,4 +1,4 @@
-filename = "b_should_be_easy"
+filename = "e_high_bonus"
 input_file = open("input/"+filename+".in", "r")
 
 R, C, F, N, B, T = input_file.readline().split()
@@ -94,9 +94,17 @@ for line in input_file.readlines():
 av_rides = copy.copy(rides)
 vehicle_queue = copy.copy(vehicles)
 
-# argh!
-# i quit!
-# not really.. ill just do it later
+# how about calculating the thing
+# lets try zipping
+
+while av_rides:
+    cut = av_rides[:len(vehicle_queue)]
+    sim = zip(vehicle_queue, av_rides)
+
+    for v, r in sim:
+        v.take_ride(r)
+    
+    av_rides = av_rides[len(vehicle_queue):]
 
 # to submit..
 output_file = open("output/" + filename + ".out", "w")
